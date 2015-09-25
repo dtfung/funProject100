@@ -19,6 +19,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
+    self.navigationItem.title = @"Animation";
 }
 
 - (void)didReceiveMemoryWarning

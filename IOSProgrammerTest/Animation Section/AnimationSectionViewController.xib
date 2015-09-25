@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Jelloween - Machinato.ttf">
+            <string>Machinato</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationSectionViewController">
             <connections>
@@ -23,9 +28,65 @@
                         <action selector="backAction:" destination="-1" eventType="touchUpInside" id="smt-Qj-UGc"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_animation" translatesAutoresizingMaskIntoConstraints="NO" id="rzT-q6-eht">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gpc_logo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="yvh-aq-g2R">
+                    <rect key="frame" x="90" y="218" width="140" height="132"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="exb-ow-buN"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="exb-ow-buN"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKQ-us-AAh">
+                    <rect key="frame" x="50" y="469" width="221" height="47"/>
+                    <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
+                    <state key="normal" title="Spin" backgroundImage="btn_bg_spin.png">
+                        <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="yvh-aq-g2R" secondAttribute="bottom" constant="260" id="5dt-tG-T1d"/>
+                <constraint firstAttribute="trailing" secondItem="yvh-aq-g2R" secondAttribute="trailing" constant="92" id="6GU-uK-nYW"/>
+                <constraint firstItem="yvh-aq-g2R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QFt-gs-HCh"/>
+                <constraint firstItem="rzT-q6-eht" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QOF-mi-9Tg"/>
+                <constraint firstItem="yvh-aq-g2R" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="VCv-2X-qD8"/>
+                <constraint firstItem="cKQ-us-AAh" firstAttribute="top" secondItem="yvh-aq-g2R" secondAttribute="bottom" constant="119" id="Val-Ru-yZw"/>
+                <constraint firstItem="yvh-aq-g2R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="93" id="Vfl-Jw-1NZ"/>
+                <constraint firstItem="yvh-aq-g2R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="93" id="Wvj-dL-1H8"/>
+                <constraint firstItem="yvh-aq-g2R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="180" id="YdE-CN-MZv"/>
+                <constraint firstAttribute="trailing" secondItem="cKQ-us-AAh" secondAttribute="trailing" constant="49" id="Yzo-2x-ObK"/>
+                <constraint firstAttribute="bottom" secondItem="cKQ-us-AAh" secondAttribute="bottom" constant="52" id="bzs-UP-XWQ"/>
+                <constraint firstAttribute="trailing" secondItem="rzT-q6-eht" secondAttribute="trailing" id="cPY-Sz-5t4"/>
+                <constraint firstItem="yvh-aq-g2R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="180" id="e7z-sv-eo9"/>
+                <constraint firstItem="rzT-q6-eht" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nyb-SK-87V"/>
+                <constraint firstItem="yvh-aq-g2R" firstAttribute="centerX" secondItem="rzT-q6-eht" secondAttribute="centerX" id="t0I-Iq-13C"/>
+                <constraint firstItem="cKQ-us-AAh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="tIG-aR-LuL"/>
+                <constraint firstAttribute="bottom" secondItem="rzT-q6-eht" secondAttribute="bottom" id="wrJ-n0-2gF"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="5dt-tG-T1d"/>
+                    <exclude reference="6GU-uK-nYW"/>
+                    <exclude reference="Vfl-Jw-1NZ"/>
+                    <exclude reference="Wvj-dL-1H8"/>
+                    <exclude reference="YdE-CN-MZv"/>
+                    <exclude reference="e7z-sv-eo9"/>
+                    <exclude reference="t0I-Iq-13C"/>
+                </mask>
+            </variation>
         </view>
     </objects>
+    <resources>
+        <image name="bg_animation" width="320" height="568"/>
+        <image name="btn_bg_spin.png" width="245" height="56"/>
+        <image name="gpc_logo_icon" width="140" height="132"/>
+    </resources>
 </document>

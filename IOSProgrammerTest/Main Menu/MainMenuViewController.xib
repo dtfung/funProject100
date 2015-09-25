@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Jelloween - Machinato.ttf">
+            <string>Machinato</string>
+            <string>Machinato</string>
+            <string>Machinato</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainMenuViewController">
             <connections>
@@ -14,36 +21,134 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyY-2I-g1i">
-                    <rect key="frame" x="83" y="176" width="154" height="72"/>
-                    <state key="normal" title="API Section">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_main_menu" highlightedImage="avatar_derrick_xu.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lxM-Qp-UlB">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" image="YES" staticText="YES"/>
+                    </accessibility>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3em-tb-Euh">
+                    <rect key="frame" x="41" y="182" width="238" height="54"/>
+                    <accessibility key="accessibilityConfiguration" label="">
+                        <accessibilityTraits key="traits" button="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="xro-uW-Xlq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
+                    <inset key="titleEdgeInsets" minX="-58" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Chat" backgroundImage="btn_bg_menu_chat"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="xro-uW-Xlq"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="xro-uW-Xlq"/>
+                        </mask>
+                    </variation>
                     <connections>
-                        <action selector="apiSectionAction:" destination="-1" eventType="touchUpInside" id="E1z-6c-yAP"/>
+                        <action selector="tableSectionAction:" destination="-1" eventType="touchUpInside" id="y9E-cz-uGV"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8J-gC-vJF">
-                    <rect key="frame" x="83" y="256" width="154" height="72"/>
-                    <state key="normal" title="Animation Section">
+                    <rect key="frame" x="41" y="314" width="238" height="54"/>
+                    <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
+                    <inset key="contentEdgeInsets" minX="38" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Animation Test" backgroundImage="btn_bg_menu_animation_test">
+                        <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="animationSectionAction:" destination="-1" eventType="touchUpInside" id="x0r-AK-Kgg"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIv-WM-yxj">
-                    <rect key="frame" x="83" y="96" width="154" height="72"/>
-                    <state key="normal" title="Table Section">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyY-2I-g1i">
+                    <rect key="frame" x="41" y="247" width="238" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="Gj8-hK-30L"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
+                    <inset key="titleEdgeInsets" minX="-47" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Login" backgroundImage="btn_bg_menu_login">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Gj8-hK-30L"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="Gj8-hK-30L"/>
+                        </mask>
+                    </variation>
                     <connections>
-                        <action selector="tableSectionAction:" destination="-1" eventType="touchUpInside" id="3Sa-RA-4sY"/>
+                        <action selector="apiSectionAction:" destination="-1" eventType="touchUpInside" id="E1z-6c-yAP"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dyY-2I-g1i" firstAttribute="top" secondItem="3em-tb-Euh" secondAttribute="bottom" constant="11" id="13h-5b-2qK"/>
+                <constraint firstItem="lxM-Qp-UlB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2o8-vh-39v"/>
+                <constraint firstItem="3em-tb-Euh" firstAttribute="leading" secondItem="u8J-gC-vJF" secondAttribute="leading" id="AJ4-74-nEx"/>
+                <constraint firstItem="3em-tb-Euh" firstAttribute="trailing" secondItem="u8J-gC-vJF" secondAttribute="trailing" id="QQX-jX-2Fk"/>
+                <constraint firstItem="3em-tb-Euh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="41" id="SU9-nv-kvh"/>
+                <constraint firstItem="lxM-Qp-UlB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Scj-fK-p1G"/>
+                <constraint firstItem="dyY-2I-g1i" firstAttribute="leading" secondItem="3em-tb-Euh" secondAttribute="leading" id="Tio-vF-NlY"/>
+                <constraint firstItem="dyY-2I-g1i" firstAttribute="trailing" secondItem="3em-tb-Euh" secondAttribute="trailing" id="XOd-1g-1bV"/>
+                <constraint firstItem="u8J-gC-vJF" firstAttribute="top" secondItem="dyY-2I-g1i" secondAttribute="bottom" constant="12" id="YWE-R4-pBr"/>
+                <constraint firstAttribute="trailing" secondItem="lxM-Qp-UlB" secondAttribute="trailing" id="Znv-xN-wbv"/>
+                <constraint firstAttribute="bottom" secondItem="lxM-Qp-UlB" secondAttribute="bottom" id="aeS-Ht-g5t"/>
+                <constraint firstItem="dyY-2I-g1i" firstAttribute="centerX" secondItem="lxM-Qp-UlB" secondAttribute="centerX" id="eId-Yc-D8E"/>
+                <constraint firstItem="3em-tb-Euh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="182" id="iYR-Or-FCl">
+                    <variation key="heightClass=regular" constant="185"/>
+                </constraint>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="2o8-vh-39v"/>
+                    <exclude reference="Scj-fK-p1G"/>
+                    <exclude reference="Znv-xN-wbv"/>
+                    <exclude reference="aeS-Ht-g5t"/>
+                    <exclude reference="AJ4-74-nEx"/>
+                    <exclude reference="QQX-jX-2Fk"/>
+                    <exclude reference="SU9-nv-kvh"/>
+                    <exclude reference="iYR-Or-FCl"/>
+                    <exclude reference="13h-5b-2qK"/>
+                    <exclude reference="Tio-vF-NlY"/>
+                    <exclude reference="XOd-1g-1bV"/>
+                    <exclude reference="eId-Yc-D8E"/>
+                    <exclude reference="YWE-R4-pBr"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular">
+                <mask key="constraints">
+                    <include reference="2o8-vh-39v"/>
+                    <include reference="Scj-fK-p1G"/>
+                    <include reference="Znv-xN-wbv"/>
+                    <include reference="aeS-Ht-g5t"/>
+                    <include reference="AJ4-74-nEx"/>
+                    <include reference="QQX-jX-2Fk"/>
+                    <include reference="SU9-nv-kvh"/>
+                    <include reference="iYR-Or-FCl"/>
+                    <include reference="13h-5b-2qK"/>
+                    <include reference="Tio-vF-NlY"/>
+                    <include reference="XOd-1g-1bV"/>
+                    <include reference="eId-Yc-D8E"/>
+                    <include reference="YWE-R4-pBr"/>
+                </mask>
+            </variation>
         </view>
     </objects>
+    <resources>
+        <image name="avatar_derrick_xu.jpg" width="584" height="584"/>
+        <image name="bg_main_menu" width="320" height="568"/>
+        <image name="btn_bg_menu_animation_test" width="245" height="54"/>
+        <image name="btn_bg_menu_chat" width="245" height="54"/>
+        <image name="btn_bg_menu_login" width="245" height="56"/>
+    </resources>
 </document>

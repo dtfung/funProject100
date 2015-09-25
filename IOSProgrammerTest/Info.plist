@@ -32,5 +32,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Jelloween - Machinato Light.ttf</string>
+		<string>Jelloween - Machinato.ttf</string>
+	</array>
 </dict>
 </plist>

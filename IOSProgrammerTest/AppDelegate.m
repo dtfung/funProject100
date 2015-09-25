@@ -24,7 +24,18 @@
     MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController" bundle:nil];
 
     self.navController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
-    [self.navController setNavigationBarHidden:YES];
+    
+    [self.navController setNavigationBarHidden:NO];
+    UINavigationBar *navigationbar = self.navController.navigationBar;
+    navigationbar.barTintColor = [UIColor colorWithRed:.2211 green:.3467 blue:.4322 alpha:.9];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    //Set font, font size, and color of navigation bar title.
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                           
+                                                           [UIFont fontWithName:@"Machinato Light" size:20.0], NSFontAttributeName, nil]];
     self.window.rootViewController = self.navController;
 
     return YES;
