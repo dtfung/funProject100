@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C40E22EA741380C9128FCFF27BBB55B07F14021B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C40E22EA741380C9128FCFF27BBB55B07F14021B" : 0,
+    "A57EB5344150F9872D0C6E605BC16B0BA3349F8E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B8D6A731-2394-48B9-9C67-5447C687228A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C40E22EA741380C9128FCFF27BBB55B07F14021B" : "funProject100\/",
+    "A57EB5344150F9872D0C6E605BC16B0BA3349F8E" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "IOSProgrammerTest",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "IOSProgrammerTest.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dtfung\/funProject100.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A57EB5344150F9872D0C6E605BC16B0BA3349F8E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dtfung\/funProject100.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C40E22EA741380C9128FCFF27BBB55B07F14021B"
+    }
+  ]
+}
