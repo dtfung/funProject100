@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AnimationSectionViewController : UIViewController
+@interface AnimationSectionViewController : UIViewController <UIDynamicAnimatorDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *appPartnerIcon;
 @end

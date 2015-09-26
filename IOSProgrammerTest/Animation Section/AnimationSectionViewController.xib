@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationSectionViewController">
             <connections>
+                <outlet property="appPartnerIcon" destination="yvh-aq-g2R" id="KBs-Mh-HeD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,7 +32,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_animation" translatesAutoresizingMaskIntoConstraints="NO" id="rzT-q6-eht">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gpc_logo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="yvh-aq-g2R">
+                <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gpc_logo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="yvh-aq-g2R">
                     <rect key="frame" x="90" y="218" width="140" height="132"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="exb-ow-buN"/>
@@ -48,6 +49,9 @@
                     <state key="normal" title="Spin" backgroundImage="btn_bg_spin.png">
                         <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                     </state>
+                    <connections>
+                        <action selector="spinButton:" destination="-1" eventType="touchUpInside" id="ylj-Sm-ozB"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

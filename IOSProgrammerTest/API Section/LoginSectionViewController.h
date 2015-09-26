@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginSectionViewController : UIViewController
+@interface LoginSectionViewController : UIViewController <NSURLSessionDataDelegate>
+
+@property (strong, nonatomic) IBOutlet UITextField *usernameField;
+
+@property (strong, nonatomic) IBOutlet UITextField *passwordField;
+
 
 @end

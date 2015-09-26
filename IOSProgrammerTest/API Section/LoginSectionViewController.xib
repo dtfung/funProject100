@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Jelloween - Machinato.ttf">
+            <string>Machinato</string>
+            <string>Machinato</string>
+            <string>Machinato</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginSectionViewController">
             <connections>
+                <outlet property="passwordField" destination="YRr-T3-1bw" id="oc6-L0-hHE"/>
+                <outlet property="usernameField" destination="YTk-im-cAa" id="yCw-3A-oO6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,18 +24,139 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDP-zC-6Xi">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDP-zC-6Xi">
                     <rect key="frame" x="8" y="14" width="73" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="73" id="VjS-tA-WS6"/>
+                        <constraint firstAttribute="height" constant="49" id="Z0w-Ze-Ox1"/>
+                        <constraint firstAttribute="height" constant="49" id="hwx-Ot-dTw"/>
+                    </constraints>
                     <state key="normal" title="Back">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="hwx-Ot-dTw"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="backAction:" destination="-1" eventType="touchUpInside" id="J25-hm-NYq"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_login" translatesAutoresizingMaskIntoConstraints="NO" id="58t-CH-WKv">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXB-xL-UC3">
+                    <rect key="frame" x="34" y="232" width="253" height="55"/>
+                    <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
+                    <state key="normal" title="Log In" backgroundImage="btn_bg_login">
+                        <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="logIn:" destination="-1" eventType="touchUpInside" id="BYP-bp-ss6"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YRr-T3-1bw">
+                    <rect key="frame" x="-1" y="163" width="322" height="50"/>
+                    <color key="backgroundColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="D17-hI-bJD"/>
+                        <constraint firstAttribute="height" constant="50" id="vZ0-Q8-Se1"/>
+                    </constraints>
+                    <color key="textColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="18"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="D17-hI-bJD"/>
+                        </mask>
+                    </variation>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   username" clearsOnBeginEditing="YES" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="YTk-im-cAa">
+                    <rect key="frame" x="0.0" y="94" width="320" height="50"/>
+                    <color key="backgroundColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="EsD-dl-VVw"/>
+                    </constraints>
+                    <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="18"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="EsD-dl-VVw"/>
+                        </mask>
+                    </variation>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ZXB-xL-UC3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0oh-G5-wBI"/>
+                <constraint firstItem="YRr-T3-1bw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="163" id="1lb-fA-kSg"/>
+                <constraint firstItem="58t-CH-WKv" firstAttribute="centerX" secondItem="ZXB-xL-UC3" secondAttribute="centerX" id="39B-LB-3Nr"/>
+                <constraint firstItem="YRr-T3-1bw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-2" id="3Ub-q9-8Ie"/>
+                <constraint firstItem="YRr-T3-1bw" firstAttribute="trailing" secondItem="58t-CH-WKv" secondAttribute="trailing" id="43f-bz-lNF"/>
+                <constraint firstItem="ZXB-xL-UC3" firstAttribute="centerX" secondItem="YRr-T3-1bw" secondAttribute="centerX" id="9eg-OO-qdB"/>
+                <constraint firstItem="YTk-im-cAa" firstAttribute="leading" secondItem="58t-CH-WKv" secondAttribute="leading" id="CKN-PQ-iay"/>
+                <constraint firstItem="YRr-T3-1bw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-2" id="Dm9-lr-iDW"/>
+                <constraint firstItem="ZXB-xL-UC3" firstAttribute="centerX" secondItem="YTk-im-cAa" secondAttribute="centerX" id="FuE-jx-3cU"/>
+                <constraint firstItem="YTk-im-cAa" firstAttribute="top" secondItem="TDP-zC-6Xi" secondAttribute="bottom" constant="31" id="GvP-Uc-An4"/>
+                <constraint firstItem="58t-CH-WKv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IFv-3p-bY5"/>
+                <constraint firstAttribute="bottom" secondItem="58t-CH-WKv" secondAttribute="bottom" id="IQG-Rb-umN"/>
+                <constraint firstItem="TDP-zC-6Xi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="14" id="Ie4-Y8-567"/>
+                <constraint firstItem="YRr-T3-1bw" firstAttribute="top" secondItem="YTk-im-cAa" secondAttribute="bottom" constant="19" id="IpH-gt-t3d"/>
+                <constraint firstItem="YRr-T3-1bw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-1" id="JZR-0V-7Lp"/>
+                <constraint firstItem="58t-CH-WKv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Jfx-NC-3A2"/>
+                <constraint firstItem="ZXB-xL-UC3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="215" id="NOX-aU-fYN"/>
+                <constraint firstItem="ZXB-xL-UC3" firstAttribute="top" secondItem="YRr-T3-1bw" secondAttribute="bottom" constant="19" id="NkT-Xd-mmn"/>
+                <constraint firstItem="YRr-T3-1bw" firstAttribute="trailing" secondItem="YTk-im-cAa" secondAttribute="trailing" id="Nsc-Ex-971"/>
+                <constraint firstItem="ZXB-xL-UC3" firstAttribute="top" secondItem="YRr-T3-1bw" secondAttribute="bottom" constant="21" id="Q5T-Mm-Lm4"/>
+                <constraint firstItem="YRr-T3-1bw" firstAttribute="trailing" secondItem="YTk-im-cAa" secondAttribute="trailing" id="Sd4-CK-X52"/>
+                <constraint firstAttribute="trailing" secondItem="58t-CH-WKv" secondAttribute="trailing" id="Trd-Np-OWT"/>
+                <constraint firstItem="ZXB-xL-UC3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="W1I-82-h1y"/>
+                <constraint firstAttribute="trailing" secondItem="ZXB-xL-UC3" secondAttribute="trailing" constant="35" id="WXy-B5-ndR"/>
+                <constraint firstItem="TDP-zC-6Xi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="14" id="X7c-wJ-Wja"/>
+                <constraint firstItem="ZXB-xL-UC3" firstAttribute="centerX" secondItem="58t-CH-WKv" secondAttribute="centerX" id="Zyh-tq-tiA"/>
+                <constraint firstItem="YTk-im-cAa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gn5-PO-jC7"/>
+                <constraint firstItem="YRr-T3-1bw" firstAttribute="trailing" secondItem="58t-CH-WKv" secondAttribute="trailing" id="h1o-Vb-8Fu"/>
+                <constraint firstAttribute="trailing" secondItem="YTk-im-cAa" secondAttribute="trailing" id="hAe-g6-eYw"/>
+                <constraint firstItem="YRr-T3-1bw" firstAttribute="top" secondItem="YTk-im-cAa" secondAttribute="bottom" constant="19" id="jGT-W1-irU"/>
+                <constraint firstItem="YTk-im-cAa" firstAttribute="top" secondItem="TDP-zC-6Xi" secondAttribute="bottom" constant="31" id="leo-h7-hrW"/>
+                <constraint firstItem="YTk-im-cAa" firstAttribute="trailing" secondItem="58t-CH-WKv" secondAttribute="trailing" id="rLb-Ir-ZUX"/>
+                <constraint firstItem="YTk-im-cAa" firstAttribute="centerX" secondItem="YRr-T3-1bw" secondAttribute="centerX" id="rlq-od-Ocf"/>
+                <constraint firstItem="TDP-zC-6Xi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="sfg-5e-28c"/>
+                <constraint firstItem="ZXB-xL-UC3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="34" id="uSG-34-8jx"/>
+                <constraint firstItem="YRr-T3-1bw" firstAttribute="centerX" secondItem="ZXB-xL-UC3" secondAttribute="centerX" id="xJW-4v-Df0"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="IFv-3p-bY5"/>
+                    <exclude reference="Trd-Np-OWT"/>
+                    <exclude reference="Ie4-Y8-567"/>
+                    <exclude reference="gn5-PO-jC7"/>
+                    <exclude reference="hAe-g6-eYw"/>
+                    <exclude reference="leo-h7-hrW"/>
+                    <exclude reference="3Ub-q9-8Ie"/>
+                    <exclude reference="43f-bz-lNF"/>
+                    <exclude reference="Dm9-lr-iDW"/>
+                    <exclude reference="Nsc-Ex-971"/>
+                    <exclude reference="Sd4-CK-X52"/>
+                    <exclude reference="h1o-Vb-8Fu"/>
+                    <exclude reference="jGT-W1-irU"/>
+                    <exclude reference="xJW-4v-Df0"/>
+                    <exclude reference="9eg-OO-qdB"/>
+                    <exclude reference="FuE-jx-3cU"/>
+                    <exclude reference="NOX-aU-fYN"/>
+                    <exclude reference="Q5T-Mm-Lm4"/>
+                    <exclude reference="W1I-82-h1y"/>
+                    <exclude reference="WXy-B5-ndR"/>
+                    <exclude reference="Zyh-tq-tiA"/>
+                </mask>
+            </variation>
         </view>
     </objects>
+    <resources>
+        <image name="bg_login" width="320" height="568"/>
+        <image name="btn_bg_login" width="244" height="55"/>
+    </resources>
 </document>

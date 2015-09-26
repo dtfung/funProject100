@@ -1,4 +1,4 @@
-//
+    //
 //  TableSectionTableViewCell.m
 //  IOSProgrammerTest
 //
@@ -11,6 +11,8 @@
 @interface ChatCell ()
 @property (nonatomic, strong) IBOutlet UILabel *usernameLabel;
 @property (nonatomic, strong) IBOutlet UITextView *messageTextView;
+@property (strong, nonatomic) IBOutlet UIImageView *userImage;
+
 @end
 
 @implementation ChatCell
@@ -22,7 +24,11 @@
 
 - (void)loadWithData:(ChatData *)chatData
 {
+//    NSData *data = [NSData dataWithContentsOfURL : chatData.avatar_url];
+//    UIImage *image = [UIImage imageWithData: data];
+    
     self.usernameLabel.text = chatData.username;
     self.messageTextView.text = chatData.message;
+   // self.userImage.image = image;
 }
 @end
