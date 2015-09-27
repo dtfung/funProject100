@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationSectionViewController">
             <connections>
-                <outlet property="appPartnerIcon" destination="yvh-aq-g2R" id="KBs-Mh-HeD"/>
+                <outlet property="appPartnerIcon" destination="yvh-aq-g2R" id="cqe-zs-lM8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

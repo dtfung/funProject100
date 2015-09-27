@@ -36,19 +36,16 @@
 }
 
 - (IBAction)spinButton:(id)sender {
-    UIDynamicAnimator *animator = [[UIDynamicAnimator alloc]initWithReferenceView:self.view];
-    UIDynamicItemBehavior *rotation = [[UIDynamicItemBehavior alloc]initWithItems:@[self.appPartnerIcon]];
-    rotation.allowsRotation = YES;
-    [rotation addAngularVelocity:1 forItem:self.appPartnerIcon];
-    [animator addBehavior:rotation];
+     _animator = [[UIDynamicAnimator alloc]initWithReferenceView:self.view];
+    _pusher = [[UIPushBehavior alloc]initWithItems:@[self.appPartnerIcon] mode:UIPushBehaviorModeInstantaneous];
+    self.pusher.angle = 360;
+    self.pusher.active = YES;
+    [self.animator addBehavior:self.pusher];
     
-    UIPushBehavior *pusher = [[UIPushBehavior alloc]initWithItems:@[self.appPartnerIcon] mode:UIPushBehaviorModeInstantaneous];
-    pusher.angle = 360;
-    pusher.magnitude = 1;
-    pusher.pushDirection = CGVectorMake(1.0, 1.0);
-    pusher.active = YES;
-    [animator addBehavior:pusher];
-    
-    
+    _rotation = [[UIDynamicItemBehavior alloc]initWithItems:@[self.appPartnerIcon]];
+    self.rotation.allowsRotation = YES;
+    [self.rotation addAngularVelocity:1 forItem:self.appPartnerIcon];
+    [self.animator addBehavior:self.rotation];
 }
+
 @end

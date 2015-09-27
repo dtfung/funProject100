@@ -10,5 +10,10 @@
 
 @interface AnimationSectionViewController : UIViewController <UIDynamicAnimatorDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *appPartnerIcon;
+@property (strong, nonatomic) IBOutlet UIImageView *appPartnerIcon;
+@property (strong, nonatomic) UIDynamicAnimator *animator;
+@property (strong, nonatomic) UIPushBehavior *pusher;
+@property (strong, nonatomic) UIDynamicItemBehavior *rotation;
+
+
 @end
