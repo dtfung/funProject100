@@ -34,6 +34,7 @@
                 </imageView>
                 <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gpc_logo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="yvh-aq-g2R">
                     <rect key="frame" x="90" y="218" width="140" height="132"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="exb-ow-buN"/>
                     </constraints>
@@ -42,6 +43,9 @@
                             <exclude reference="exb-ow-buN"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="RWh-h5-n8G" appends="YES" id="yNq-HI-ayy"/>
+                    </connections>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKQ-us-AAh">
                     <rect key="frame" x="50" y="469" width="221" height="47"/>
@@ -87,6 +91,11 @@
                 </mask>
             </variation>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="RWh-h5-n8G">
+            <connections>
+                <action selector="panGesture:" destination="-1" id="Tqp-aC-2KT"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
     <resources>
         <image name="bg_animation" width="320" height="568"/>
