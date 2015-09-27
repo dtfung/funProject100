@@ -37,5 +37,10 @@
 		<string>Jelloween - Machinato Light.ttf</string>
 		<string>Jelloween - Machinato.ttf</string>
 	</array>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>

@@ -24,6 +24,10 @@
 		DC932C201A40A50A000035B7 /* ChatSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC932C161A40A50A000035B7 /* ChatSectionViewController.m */; };
 		DC932C211A40A50A000035B7 /* ChatSectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC932C171A40A50A000035B7 /* ChatSectionViewController.xib */; };
 		DC932C3C1A41FDC9000035B7 /* chatData.json in Resources */ = {isa = PBXBuildFile; fileRef = DC932C3B1A41FDC9000035B7 /* chatData.json */; };
+		F61971CA1BB81D8000E06D91 /* loading_image_iPhone4.png in Resources */ = {isa = PBXBuildFile; fileRef = F61971C61BB81D8000E06D91 /* loading_image_iPhone4.png */; settings = {ASSET_TAGS = (); }; };
+		F61971CB1BB81D8000E06D91 /* loading_image_iPhone5.png in Resources */ = {isa = PBXBuildFile; fileRef = F61971C71BB81D8000E06D91 /* loading_image_iPhone5.png */; settings = {ASSET_TAGS = (); }; };
+		F61971CC1BB81D8000E06D91 /* loading_image_iPhone6.png in Resources */ = {isa = PBXBuildFile; fileRef = F61971C81BB81D8000E06D91 /* loading_image_iPhone6.png */; settings = {ASSET_TAGS = (); }; };
+		F61971CD1BB81D8000E06D91 /* loading_image_iPhone6plus.png in Resources */ = {isa = PBXBuildFile; fileRef = F61971C91BB81D8000E06D91 /* loading_image_iPhone6plus.png */; settings = {ASSET_TAGS = (); }; };
 		F64245B21BB518F90031EA3B /* Jelloween - Machinato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64245B11BB518F90031EA3B /* Jelloween - Machinato.ttf */; settings = {ASSET_TAGS = (); }; };
 		F64245F91BB603000031EA3B /* Jelloween - Machinato Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F64245F81BB600310031EA3B /* Jelloween - Machinato Light.ttf */; settings = {ASSET_TAGS = (); }; };
 		F6E3109C1BB737A30067B6C6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E3109B1BB737A30067B6C6 /* CoreGraphics.framework */; };
@@ -68,6 +72,10 @@
 		DC932C161A40A50A000035B7 /* ChatSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSectionViewController.m; sourceTree = "<group>"; };
 		DC932C171A40A50A000035B7 /* ChatSectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatSectionViewController.xib; sourceTree = "<group>"; };
 		DC932C3B1A41FDC9000035B7 /* chatData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chatData.json; sourceTree = "<group>"; };
+		F61971C61BB81D8000E06D91 /* loading_image_iPhone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_image_iPhone4.png; sourceTree = "<group>"; };
+		F61971C71BB81D8000E06D91 /* loading_image_iPhone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_image_iPhone5.png; sourceTree = "<group>"; };
+		F61971C81BB81D8000E06D91 /* loading_image_iPhone6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_image_iPhone6.png; sourceTree = "<group>"; };
+		F61971C91BB81D8000E06D91 /* loading_image_iPhone6plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_image_iPhone6plus.png; sourceTree = "<group>"; };
 		F64245B11BB518F90031EA3B /* Jelloween - Machinato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jelloween - Machinato.ttf"; sourceTree = "<group>"; };
 		F64245F81BB600310031EA3B /* Jelloween - Machinato Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jelloween - Machinato Light.ttf"; sourceTree = "<group>"; };
 		F6E3109B1BB737A30067B6C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -130,6 +138,7 @@
 		4434B5B31A3FBB7100687081 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F61971CE1BB81D8700E06D91 /* loading images */,
 				F64245B01BB518C60031EA3B /* fonts */,
 				4434B5B41A3FBB7100687081 /* Info.plist */,
 				4434B5B51A3FBB7100687081 /* main.m */,
@@ -208,6 +217,17 @@
 			);
 			name = JSON;
 			path = "JSON data";
+			sourceTree = "<group>";
+		};
+		F61971CE1BB81D8700E06D91 /* loading images */ = {
+			isa = PBXGroup;
+			children = (
+				F61971C61BB81D8000E06D91 /* loading_image_iPhone4.png */,
+				F61971C71BB81D8000E06D91 /* loading_image_iPhone5.png */,
+				F61971C81BB81D8000E06D91 /* loading_image_iPhone6.png */,
+				F61971C91BB81D8000E06D91 /* loading_image_iPhone6plus.png */,
+			);
+			name = "loading images";
 			sourceTree = "<group>";
 		};
 		F64245B01BB518C60031EA3B /* fonts */ = {
@@ -300,15 +320,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				4434B5C41A3FBB7100687081 /* LaunchScreen.xib in Resources */,
+				F61971CA1BB81D8000E06D91 /* loading_image_iPhone4.png in Resources */,
 				F64245F91BB603000031EA3B /* Jelloween - Machinato Light.ttf in Resources */,
 				DC932C211A40A50A000035B7 /* ChatSectionViewController.xib in Resources */,
+				F61971CD1BB81D8000E06D91 /* loading_image_iPhone6plus.png in Resources */,
 				DC932C191A40A50A000035B7 /* AnimationSectionViewController.xib in Resources */,
 				F64245B21BB518F90031EA3B /* Jelloween - Machinato.ttf in Resources */,
 				DC932C1F1A40A50A000035B7 /* ChatCell.xib in Resources */,
+				F61971CC1BB81D8000E06D91 /* loading_image_iPhone6.png in Resources */,
 				4434B5C11A3FBB7100687081 /* Images.xcassets in Resources */,
 				DC932C1D1A40A50A000035B7 /* MainMenuViewController.xib in Resources */,
 				DC932C1B1A40A50A000035B7 /* LoginSectionViewController.xib in Resources */,
 				DC932C3C1A41FDC9000035B7 /* chatData.json in Resources */,
+				F61971CB1BB81D8000E06D91 /* loading_image_iPhone5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
