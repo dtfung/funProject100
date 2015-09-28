@@ -75,7 +75,7 @@
     
     static NSString *cellIdentifier = @"ChatCell";
     ChatCell *cell = nil;
-
+    
     if (cell == nil)
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];

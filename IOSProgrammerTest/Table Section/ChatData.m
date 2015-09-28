@@ -23,7 +23,6 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
-//                            [[NSNotificationCenter defaultCenter] postNotificationName:@"PhotoNotification" object:self userInfo:nil];
             if (imgData)
             {
                 //Load the data into an UIImage:
@@ -32,8 +31,10 @@
                 //Check if your image loaded successfully:
                 if (image)
                 {
-
+                    
                    _imageName = image;
+                     [[NSNotificationCenter defaultCenter] postNotificationName:@"pictureNotification" object:nil];
+                
                 }
                 else
                 {
@@ -49,4 +50,7 @@
         });
     });
 }
+
+
+
 @end

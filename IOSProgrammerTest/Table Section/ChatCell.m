@@ -1,4 +1,4 @@
-    //
+//
 //  TableSectionTableViewCell.m
 //  IOSProgrammerTest
 //
@@ -22,20 +22,28 @@
     // Initialization code
     self.userImage.layer.cornerRadius = self.userImage.frame.size.width/2;
     self.userImage.clipsToBounds =YES;
+    
+    // NSNotification: Make self an observer
+    //    [[NSNotificationCenter defaultCenter] addObserver:self
+    //                                             selector:@selector(loadWithData:)
+    //                                                 name:@"pictureNotification"
+    //                                               object:nil];
 }
 
 - (void)loadWithData:(ChatData *)chatData
 
 {
-
+    
     self.usernameLabel.text = chatData.username;
     self.messageTextView.text = chatData.message;
-    
     self.userImage.image = chatData.imageName;
-//    [[NSNotificationCenter defaultCenter]addObserverForName:@"PhotoNotification" object:nil queue:nil usingBlock:^(NSNotification *note) {
-//        self.userImage.image = chatData.imageName;
-//    }];
-
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"pictureNotification" object:nil queue:nil usingBlock:^(NSNotification *note) {
+        self.userImage.image = chatData.imageName;
+    }];
+    
+    //Remove observer once it has been notified 
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pictureNotification" object:nil];
     
 }
+
 @end
