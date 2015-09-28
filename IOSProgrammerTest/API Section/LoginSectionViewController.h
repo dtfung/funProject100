@@ -14,6 +14,6 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
 
-@property (strong,nonatomic) NSDictionary *dictionary;
+
 
 @end

@@ -7,8 +7,7 @@
 //
 
 #import "LoginSectionViewController.h"
-#import "MainMenuViewController.h"//Users/Don/Documents/github/funProject100/IOSProgrammerTest/API Section/LoginSectionViewController.xib
-
+#import "MainMenuViewController.h"
 @interface LoginSectionViewController ()
 
 @end
@@ -23,14 +22,15 @@
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.title = @"Login";
     
-    _dictionary=[[NSDictionary alloc]init];
+    
     
     
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-        MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
-        [self.navigationController pushViewController:mainMenuViewController animated:YES];
+- (void)pushToRoot {
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,16 +54,7 @@
     NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url];
     [urlRequest setHTTPMethod:@"POST"];
     
-    NSString *usernameText = self.usernameField.text;
-   NSString *passwordText = self.passwordField.text;
-    NSLog(@"username=%@&password=%@",usernameText,passwordText);
-    //NSString * params =  @"username=%p&password=%p",&usernameText,&passwordText;
-    NSString * params =  @"username=Superoise&password=qwerty";
-    //NSDictionary *params = @{@"username": self.usernameField.text, @"password": self.passwordField.text};
-    
-    //NSData * json = [NSJSONSerialization dataWithJSONObject:params options:kNilOptions error:nil];
-    //urlRequest.HTTPBody = json;
-
+    NSString * params = [NSString stringWithFormat: @"username=%@&password=%@",self.usernameField.text,self.passwordField.text];
     [urlRequest setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
     
     NSURLSessionDataTask * dataTask =[defaultSession dataTaskWithRequest:urlRequest
@@ -76,36 +67,42 @@
                                                                
                                                            }
                                                            
-                                                          _dictionary = [NSJSONSerialization JSONObjectWithData:data
-                                                                                                                options:kNilOptions
-                                                                                                                  error:nil];
                                                            
-                                                           [self alertView];
-
-                                            
+                                                           
+                                                           NSTimeInterval startTimer = [NSDate timeIntervalSinceReferenceDate];
+                                                           
+                                                           // Get on main queue
+                                                           dispatch_async(dispatch_get_main_queue(), ^{
+                                                               
+                                                               // timer (in miliseconds)
+                                                               NSTimeInterval elapsedTimer = ([NSDate timeIntervalSinceReferenceDate] - startTimer) * 1000;
+                                                               
+                                                               // Cenvert JSON into NSDictionary
+                                                               NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+                                                               // Create in UIAlert
+                                                               UIAlertController *alert = [UIAlertController alertControllerWithTitle:[dictionary objectForKey:@"code"]
+                                                                                                                              message: [NSString stringWithFormat:@"%@\n\nAPI call took %f milliseconds",[dictionary valueForKey:@"message"], elapsedTimer]
+                                                                                                                       preferredStyle:UIAlertControllerStyleAlert];
+                                                               // Create UIAlertAction
+                                                               UIAlertAction *dismiss = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                                                                   // If login is successful, bring back to main screen
+                                                                   if ([[dictionary valueForKey:@"code"] isEqualToString: @"Success"]) {
+                                                                       [self pushToRoot];                                                          }
+                                                               }];
+                                                               [alert addAction:dismiss];
+                                                               [self presentViewController:alert animated:YES completion:nil];
+                                                               
+                                                           });
+                                                           
+                                                           
+                                                           
                                                        }];
-        [dataTask resume];
-    
-   }
-
-- (void)alertView {
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:[_dictionary objectForKey:@"code"]
-                                                                   message:[_dictionary objectForKey:@"message"]
-                                                            preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
-    
-    [alert addAction:defaultAction];
-    [self presentViewController:alert animated:YES completion:NULL];
-    
+    [dataTask resume];
     
 }
 
-//- (void)pushToRoot {
-//    MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
-//    [self.navigationController pushViewController:mainMenuViewController animated:YES];
-//}
+
+
 
 
 
