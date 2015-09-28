@@ -20,15 +20,22 @@
 - (void)awakeFromNib
 {
     // Initialization code
+    self.userImage.layer.cornerRadius = self.userImage.frame.size.width/2;
+    self.userImage.clipsToBounds =YES;
 }
 
 - (void)loadWithData:(ChatData *)chatData
+
 {
-//    NSData *data = [NSData dataWithContentsOfURL : chatData.avatar_url];
-//    UIImage *image = [UIImage imageWithData: data];
-    
+
     self.usernameLabel.text = chatData.username;
     self.messageTextView.text = chatData.message;
-   // self.userImage.image = image;
+    
+    self.userImage.image = chatData.imageName;
+//    [[NSNotificationCenter defaultCenter]addObserverForName:@"PhotoNotification" object:nil queue:nil usingBlock:^(NSNotification *note) {
+//        self.userImage.image = chatData.imageName;
+//    }];
+
+    
 }
 @end

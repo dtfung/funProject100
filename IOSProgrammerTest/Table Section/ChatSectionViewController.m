@@ -10,7 +10,7 @@
 #import "MainMenuViewController.h"
 #import "ChatCell.h"
 
-#define TABLE_CELL_HEIGHT 45.0f
+#define TABLE_CELL_HEIGHT 102.0f
 
 @interface ChatSectionViewController ()
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
@@ -24,7 +24,7 @@
     [super viewDidLoad];
     
   // [self.navigationItem setHidesBackButton:YES animated:YES];
-    
+    self.navigationItem.title = @"Chat";
      
     
     self.loadedChatData = [[NSMutableArray alloc] init];
@@ -72,6 +72,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *cellIdentifier = @"ChatCell";
     ChatCell *cell = nil;
 
@@ -84,8 +85,10 @@
     ChatData *chatData = [self.loadedChatData objectAtIndex:[indexPath row]];
 
     [cell loadWithData:chatData];
+    
 
     return cell;
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

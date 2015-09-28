@@ -15,5 +15,38 @@
     self.username = [dict objectForKey:@"username"];
     self.avatar_url = [dict objectForKey:@"avatar_url"];
     self.message = [dict objectForKey:@"message"];
+
+    
+    //Request image data from the URL:
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        NSData *imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.avatar_url]];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+//                            [[NSNotificationCenter defaultCenter] postNotificationName:@"PhotoNotification" object:self userInfo:nil];
+            if (imgData)
+            {
+                //Load the data into an UIImage:
+                UIImage *image = [UIImage imageWithData:imgData];
+                
+                //Check if your image loaded successfully:
+                if (image)
+                {
+
+                   _imageName = image;
+                }
+                else
+                {
+                    //Failed to load the data into an UIImage:
+                    _imageName = [UIImage imageNamed:@"no-data-image.png"];
+                }
+            }
+            else
+            {
+                //Failed to get the image data:
+                _imageName = [UIImage imageNamed:@"no-data-image.png"];
+            }
+        });
+    });
 }
 @end

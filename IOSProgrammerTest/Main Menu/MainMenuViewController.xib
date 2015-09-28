@@ -33,18 +33,23 @@
                         <accessibilityTraits key="traits" button="YES"/>
                     </accessibility>
                     <constraints>
-                        <constraint firstAttribute="height" constant="54" id="xro-uW-Xlq"/>
+                        <constraint firstAttribute="width" constant="238" id="71V-Xy-ZAn"/>
+                        <constraint firstAttribute="height" constant="54" id="xro-uW-Xlq">
+                            <variation key="heightClass=regular" constant="55"/>
+                        </constraint>
                     </constraints>
                     <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
                     <inset key="titleEdgeInsets" minX="-58" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="Chat" backgroundImage="btn_bg_menu_chat"/>
                     <variation key="default">
                         <mask key="constraints">
+                            <exclude reference="71V-Xy-ZAn"/>
                             <exclude reference="xro-uW-Xlq"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular">
                         <mask key="constraints">
+                            <include reference="71V-Xy-ZAn"/>
                             <include reference="xro-uW-Xlq"/>
                         </mask>
                     </variation>
@@ -54,12 +59,28 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8J-gC-vJF">
                     <rect key="frame" x="41" y="314" width="238" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="238" id="LI0-Uh-Zvz"/>
+                        <constraint firstAttribute="height" constant="54" id="Y0O-lG-Bty"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
                     <inset key="contentEdgeInsets" minX="38" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="Animation Test" backgroundImage="btn_bg_menu_animation_test">
                         <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="LI0-Uh-Zvz"/>
+                            <exclude reference="Y0O-lG-Bty"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="LI0-Uh-Zvz"/>
+                            <include reference="Y0O-lG-Bty"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="animationSectionAction:" destination="-1" eventType="touchUpInside" id="x0r-AK-Kgg"/>
                     </connections>
@@ -68,6 +89,7 @@
                     <rect key="frame" x="41" y="247" width="238" height="56"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="Gj8-hK-30L"/>
+                        <constraint firstAttribute="width" constant="238" id="PIy-Hu-Yht"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
                     <inset key="titleEdgeInsets" minX="-47" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -77,11 +99,13 @@
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="Gj8-hK-30L"/>
+                            <exclude reference="PIy-Hu-Yht"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular">
                         <mask key="constraints">
                             <include reference="Gj8-hK-30L"/>
+                            <include reference="PIy-Hu-Yht"/>
                         </mask>
                     </variation>
                     <connections>
@@ -101,20 +125,32 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="dyY-2I-g1i" firstAttribute="top" secondItem="3em-tb-Euh" secondAttribute="bottom" constant="11" id="13h-5b-2qK"/>
+                <constraint firstItem="3em-tb-Euh" firstAttribute="trailing" secondItem="dyY-2I-g1i" secondAttribute="trailing" id="1ZY-Sd-8Jy"/>
                 <constraint firstItem="lxM-Qp-UlB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2o8-vh-39v"/>
                 <constraint firstItem="3em-tb-Euh" firstAttribute="leading" secondItem="u8J-gC-vJF" secondAttribute="leading" id="AJ4-74-nEx"/>
+                <constraint firstItem="3em-tb-Euh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HW6-XY-PXz"/>
+                <constraint firstItem="dyY-2I-g1i" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PFJ-zO-oq3"/>
                 <constraint firstItem="3em-tb-Euh" firstAttribute="trailing" secondItem="u8J-gC-vJF" secondAttribute="trailing" id="QQX-jX-2Fk"/>
                 <constraint firstItem="3em-tb-Euh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="41" id="SU9-nv-kvh"/>
                 <constraint firstItem="lxM-Qp-UlB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Scj-fK-p1G"/>
                 <constraint firstItem="dyY-2I-g1i" firstAttribute="leading" secondItem="3em-tb-Euh" secondAttribute="leading" id="Tio-vF-NlY"/>
                 <constraint firstItem="dyY-2I-g1i" firstAttribute="trailing" secondItem="3em-tb-Euh" secondAttribute="trailing" id="XOd-1g-1bV"/>
                 <constraint firstItem="u8J-gC-vJF" firstAttribute="top" secondItem="dyY-2I-g1i" secondAttribute="bottom" constant="12" id="YWE-R4-pBr"/>
+                <constraint firstItem="u8J-gC-vJF" firstAttribute="top" secondItem="dyY-2I-g1i" secondAttribute="bottom" constant="11" id="YmG-4j-eNB"/>
                 <constraint firstAttribute="trailing" secondItem="lxM-Qp-UlB" secondAttribute="trailing" id="Znv-xN-wbv"/>
                 <constraint firstAttribute="bottom" secondItem="lxM-Qp-UlB" secondAttribute="bottom" id="aeS-Ht-g5t"/>
+                <constraint firstItem="dyY-2I-g1i" firstAttribute="top" secondItem="3em-tb-Euh" secondAttribute="bottom" constant="11" id="b2l-XS-nNT"/>
                 <constraint firstItem="dyY-2I-g1i" firstAttribute="centerX" secondItem="lxM-Qp-UlB" secondAttribute="centerX" id="eId-Yc-D8E"/>
                 <constraint firstItem="3em-tb-Euh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="182" id="iYR-Or-FCl">
                     <variation key="heightClass=regular" constant="185"/>
                 </constraint>
+                <constraint firstItem="3em-tb-Euh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ieQ-Sf-H7G"/>
+                <constraint firstItem="3em-tb-Euh" firstAttribute="leading" secondItem="dyY-2I-g1i" secondAttribute="leading" id="nfw-gD-G1H"/>
+                <constraint firstItem="dyY-2I-g1i" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="oYc-ZB-QNg"/>
+                <constraint firstItem="3em-tb-Euh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="41" id="vMr-yb-yKW"/>
+                <constraint firstItem="3em-tb-Euh" firstAttribute="trailing" secondItem="dyY-2I-g1i" secondAttribute="trailing" id="wTQ-wE-RXd"/>
+                <constraint firstItem="u8J-gC-vJF" firstAttribute="trailing" secondItem="dyY-2I-g1i" secondAttribute="trailing" id="zvh-Hr-FhK"/>
+                <constraint firstAttribute="trailing" secondItem="3em-tb-Euh" secondAttribute="trailing" constant="41" id="zvh-gq-UNt"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <variation key="default">
@@ -126,15 +162,27 @@
                     <exclude reference="Scj-fK-p1G"/>
                     <exclude reference="Znv-xN-wbv"/>
                     <exclude reference="aeS-Ht-g5t"/>
+                    <exclude reference="1ZY-Sd-8Jy"/>
                     <exclude reference="AJ4-74-nEx"/>
+                    <exclude reference="HW6-XY-PXz"/>
                     <exclude reference="QQX-jX-2Fk"/>
                     <exclude reference="SU9-nv-kvh"/>
                     <exclude reference="iYR-Or-FCl"/>
+                    <exclude reference="ieQ-Sf-H7G"/>
+                    <exclude reference="nfw-gD-G1H"/>
+                    <exclude reference="vMr-yb-yKW"/>
+                    <exclude reference="wTQ-wE-RXd"/>
+                    <exclude reference="zvh-gq-UNt"/>
                     <exclude reference="13h-5b-2qK"/>
+                    <exclude reference="PFJ-zO-oq3"/>
                     <exclude reference="Tio-vF-NlY"/>
                     <exclude reference="XOd-1g-1bV"/>
+                    <exclude reference="b2l-XS-nNT"/>
                     <exclude reference="eId-Yc-D8E"/>
+                    <exclude reference="oYc-ZB-QNg"/>
                     <exclude reference="YWE-R4-pBr"/>
+                    <exclude reference="YmG-4j-eNB"/>
+                    <exclude reference="zvh-Hr-FhK"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
@@ -146,15 +194,27 @@
                     <include reference="Scj-fK-p1G"/>
                     <include reference="Znv-xN-wbv"/>
                     <include reference="aeS-Ht-g5t"/>
-                    <include reference="AJ4-74-nEx"/>
-                    <include reference="QQX-jX-2Fk"/>
-                    <include reference="SU9-nv-kvh"/>
-                    <include reference="iYR-Or-FCl"/>
-                    <include reference="13h-5b-2qK"/>
-                    <include reference="Tio-vF-NlY"/>
-                    <include reference="XOd-1g-1bV"/>
-                    <include reference="eId-Yc-D8E"/>
-                    <include reference="YWE-R4-pBr"/>
+                    <exclude reference="1ZY-Sd-8Jy"/>
+                    <exclude reference="AJ4-74-nEx"/>
+                    <exclude reference="HW6-XY-PXz"/>
+                    <exclude reference="QQX-jX-2Fk"/>
+                    <exclude reference="SU9-nv-kvh"/>
+                    <exclude reference="iYR-Or-FCl"/>
+                    <exclude reference="ieQ-Sf-H7G"/>
+                    <exclude reference="nfw-gD-G1H"/>
+                    <exclude reference="vMr-yb-yKW"/>
+                    <include reference="wTQ-wE-RXd"/>
+                    <exclude reference="zvh-gq-UNt"/>
+                    <exclude reference="13h-5b-2qK"/>
+                    <include reference="PFJ-zO-oq3"/>
+                    <exclude reference="Tio-vF-NlY"/>
+                    <exclude reference="XOd-1g-1bV"/>
+                    <include reference="b2l-XS-nNT"/>
+                    <exclude reference="eId-Yc-D8E"/>
+                    <include reference="oYc-ZB-QNg"/>
+                    <exclude reference="YWE-R4-pBr"/>
+                    <include reference="YmG-4j-eNB"/>
+                    <include reference="zvh-Hr-FhK"/>
                 </mask>
             </variation>
         </view>

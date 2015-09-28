@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="udg-gG-eTY">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="udg-gG-eTY">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -25,6 +25,12 @@
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="udg-gG-eTY" secondAttribute="trailing" id="7qD-dT-H6e"/>
+                <constraint firstItem="udg-gG-eTY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WlW-p8-SDQ"/>
+                <constraint firstItem="udg-gG-eTY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fDP-xc-4NL"/>
+                <constraint firstAttribute="bottom" secondItem="udg-gG-eTY" secondAttribute="bottom" id="r6S-3B-rLU"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
