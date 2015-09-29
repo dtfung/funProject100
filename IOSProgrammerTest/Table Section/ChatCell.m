@@ -19,31 +19,25 @@
 
 - (void)awakeFromNib
 {
-    // Initialization code
+    // Customize shape of image
     self.userImage.layer.cornerRadius = self.userImage.frame.size.width/2;
     self.userImage.clipsToBounds =YES;
-    
-    // NSNotification: Make self an observer
-    //    [[NSNotificationCenter defaultCenter] addObserver:self
-    //                                             selector:@selector(loadWithData:)
-    //                                                 name:@"pictureNotification"
-    //                                               object:nil];
 }
 
 - (void)loadWithData:(ChatData *)chatData
-
 {
-    
+    // Assign values from JSON file
     self.usernameLabel.text = chatData.username;
     self.messageTextView.text = chatData.message;
     self.userImage.image = chatData.imageName;
+    
+    //  Receive a notification & then assign value to image view
     [[NSNotificationCenter defaultCenter] addObserverForName:@"pictureNotification" object:nil queue:nil usingBlock:^(NSNotification *note) {
         self.userImage.image = chatData.imageName;
     }];
     
-    //Remove observer once it has been notified 
+    //  Remove observer once it has been notified
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pictureNotification" object:nil];
-    
 }
 
 @end

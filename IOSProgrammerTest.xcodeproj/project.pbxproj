@@ -103,7 +103,6 @@
 		4434B5A71A3FBB7100687081 = {
 			isa = PBXGroup;
 			children = (
-				F6E3109B1BB737A30067B6C6 /* CoreGraphics.framework */,
 				4434B5B21A3FBB7100687081 /* IOSProgrammerTest */,
 				4434B5CC1A3FBB7100687081 /* IOSProgrammerTestTests */,
 				4434B5B11A3FBB7100687081 /* Products */,
@@ -138,6 +137,7 @@
 		4434B5B31A3FBB7100687081 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F6E3109B1BB737A30067B6C6 /* CoreGraphics.framework */,
 				F61971CE1BB81D8700E06D91 /* loading images */,
 				F64245B01BB518C60031EA3B /* fonts */,
 				4434B5B41A3FBB7100687081 /* Info.plist */,

@@ -15,6 +15,8 @@
 
 @implementation AnimationSectionViewController
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -23,7 +25,6 @@
     self.navigationItem.title = @"Animation";
     
     _animator = [[UIDynamicAnimator alloc]initWithReferenceView:self.view];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,11 +39,11 @@
     [self.navigationController pushViewController:mainMenuViewController animated:YES];
 }
 
-- (IBAction)spinButton:(id)sender {
-         _pusher = [[UIPushBehavior alloc]initWithItems:@[self.appPartnerIcon] mode:UIPushBehaviorModeInstantaneous];
+- (IBAction)spinButton:(id)sender
+{
+    _pusher = [[UIPushBehavior alloc]initWithItems:@[self.appPartnerIcon] mode:UIPushBehaviorModeInstantaneous];
     self.pusher.angle = 360;
     self.pusher.active = YES;
-    
     [self.animator addBehavior:self.pusher];
     
     _rotation = [[UIDynamicItemBehavior alloc]initWithItems:@[self.appPartnerIcon]];
@@ -51,16 +52,13 @@
     [self.animator addBehavior:self.rotation];
 }
 
-
-
-
-- (IBAction)panGesture:(UIPanGestureRecognizer *)sender {
-    
+- (IBAction)panGesture:(UIPanGestureRecognizer *)sender
+{
     CGPoint translation = [sender translationInView:self.view];
     sender.view.center = CGPointMake(sender.view.center.x + translation.x,
-                                         sender.view.center.y + translation.y);
+                                     sender.view.center.y + translation.y);
     [sender setTranslation:CGPointMake(0, 0) inView:self.view];
- 
+    [self.animator updateItemUsingCurrentState:self.appPartnerIcon];
 }
 
 

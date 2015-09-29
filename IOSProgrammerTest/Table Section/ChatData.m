@@ -9,32 +9,35 @@
 #import "ChatData.h"
 
 @implementation ChatData
+
+
+
 - (void)loadWithDictionary:(NSDictionary *)dict
 {
     self.user_id = [[dict objectForKey:@"user_id"] intValue];
     self.username = [dict objectForKey:@"username"];
     self.avatar_url = [dict objectForKey:@"avatar_url"];
     self.message = [dict objectForKey:@"message"];
-
     
-    //Request image data from the URL:
+    //  Request image data from the URL asynchronously
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         NSData *imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.avatar_url]];
         
+        // Get back on main thread.
         dispatch_async(dispatch_get_main_queue(), ^{
             
             if (imgData)
             {
-                //Load the data into an UIImage:
+                //  Load the data into an UIImage:
                 UIImage *image = [UIImage imageWithData:imgData];
                 
-                //Check if your image loaded successfully:
+                //  If image loaded successfully
                 if (image)
                 {
+                    _imageName = image;
                     
-                   _imageName = image;
-                     [[NSNotificationCenter defaultCenter] postNotificationName:@"pictureNotification" object:nil];
-                
+                    // Send a notification to a receiver
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"pictureNotification" object:nil];
                 }
                 else
                 {
@@ -50,7 +53,5 @@
         });
     });
 }
-
-
 
 @end

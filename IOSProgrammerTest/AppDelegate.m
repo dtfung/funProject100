@@ -20,24 +20,31 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
-
+    
     MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController" bundle:nil];
-
+    
     self.navController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
     
     [self.navController setNavigationBarHidden:NO];
+    
+    // Created an instance of UINavigationBar
     UINavigationBar *navigationbar = self.navController.navigationBar;
+    
+    // Set the nav bar's background color
     navigationbar.barTintColor = [UIColor colorWithRed:.2211 green:.3467 blue:.4322 alpha:.9];
     
+    // Set color of back button
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
-    //Set font, font size, and color of navigation bar title.
+    // Set font, font size, and color of navigation bar title.
+    
+    // Customize nav bar's title
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                            [UIColor whiteColor], NSForegroundColorAttributeName,
                                                            
-                                                           [UIFont fontWithName:@"Machinato Light" size:20.0], NSFontAttributeName, nil]];
+                                                           [UIFont fontWithName:@"Machinato-Light" size:20.0], NSFontAttributeName, nil]];
     self.window.rootViewController = self.navController;
-
+    
     return YES;
 }
 

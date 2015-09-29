@@ -18,4 +18,5 @@
 @property (nonatomic, strong) UIImage *imageName;
 
 - (void)loadWithDictionary:(NSDictionary *)dict;
+
 @end

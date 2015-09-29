@@ -22,13 +22,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-  // [self.navigationItem setHidesBackButton:YES animated:YES];
+
     self.navigationItem.title = @"Chat";
      
-    
-    self.loadedChatData = [[NSMutableArray alloc] init];
+    _loadedChatData = [[NSMutableArray alloc] init];
     [self loadJSONData];
+    
+
 }
 
 - (void)loadJSONData

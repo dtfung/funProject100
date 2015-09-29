@@ -112,15 +112,6 @@
                         <action selector="apiSectionAction:" destination="-1" eventType="touchUpInside" id="E1z-6c-yAP"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGc-Q7-Kl4">
-                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                    <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="134" y="8" width="42" height="21"/>
-                    </variation>
-                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -154,9 +145,6 @@
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <variation key="default">
-                <mask key="subviews">
-                    <exclude reference="bGc-Q7-Kl4"/>
-                </mask>
                 <mask key="constraints">
                     <exclude reference="2o8-vh-39v"/>
                     <exclude reference="Scj-fK-p1G"/>
@@ -186,9 +174,6 @@
                 </mask>
             </variation>
             <variation key="heightClass=regular">
-                <mask key="subviews">
-                    <include reference="bGc-Q7-Kl4"/>
-                </mask>
                 <mask key="constraints">
                     <include reference="2o8-vh-39v"/>
                     <include reference="Scj-fK-p1G"/>

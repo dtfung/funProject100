@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AnimationSectionViewController : UIViewController <UIDynamicAnimatorDelegate, UIDynamicItem, UIGestureRecognizerDelegate>
+@interface AnimationSectionViewController : UIViewController <UIDynamicAnimatorDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *appPartnerIcon;
 @property (strong, nonatomic) UIDynamicAnimator *animator;

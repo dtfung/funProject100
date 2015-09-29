@@ -20,8 +20,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
     
+    // Customize back bar button
     self.navigationItem.backBarButtonItem =
     [[UIBarButtonItem alloc] initWithTitle:@""
                                      style:UIBarButtonItemStylePlain
@@ -29,8 +31,6 @@
                                     action:nil];
     
     self.navigationItem.title = @"Coding Tasks";
-    //[self.navigationItem.title :[UIColor whiteColor]];
-    
 }
 
 - (void)didReceiveMemoryWarning

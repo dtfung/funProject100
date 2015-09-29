@@ -11,7 +11,6 @@
 @interface LoginSectionViewController : UIViewController <NSURLSessionDataDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *usernameField;
-
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
 
 
