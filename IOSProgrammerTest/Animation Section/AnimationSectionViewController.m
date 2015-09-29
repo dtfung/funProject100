@@ -61,6 +61,4 @@
     [self.animator updateItemUsingCurrentState:self.appPartnerIcon];
 }
 
-
-
 @end

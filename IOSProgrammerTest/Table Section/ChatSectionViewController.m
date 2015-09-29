@@ -27,8 +27,6 @@
      
     _loadedChatData = [[NSMutableArray alloc] init];
     [self loadJSONData];
-    
-
 }
 
 - (void)loadJSONData
