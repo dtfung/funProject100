@@ -40,6 +40,27 @@
     [self.navigationController pushViewController:mainMenuViewController animated:YES];
 }
 
+-(IBAction)textFieldReturn:(id)sender
+{
+    // Hide keyboard when user touches the return key
+    [sender resignFirstResponder];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    // Hide keyboard when user taps the background view
+    UITouch *touch = [[event allTouches] anyObject];
+    if ([self.usernameField isFirstResponder] && [touch view] != self.usernameField)
+    {
+        [self.usernameField resignFirstResponder];
+    }
+    else if ([self.passwordField isFirstResponder] && [touch view] != self.passwordField)
+    {
+        [self.passwordField resignFirstResponder];
+    }
+    [super touchesBegan:touches withEvent:event];
+}
+
 - (IBAction)logIn:(id)sender
 {
     // Configure POST request
@@ -93,28 +114,6 @@
                                                    });
                                                }];
     [dataTask resume];
-}
-
-
--(IBAction)textFieldReturn:(id)sender
-{
-    // Hide keyboard when user touches the return key
-    [sender resignFirstResponder];
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    // Hide keyboard when user taps the background view
-    UITouch *touch = [[event allTouches] anyObject];
-    if ([self.usernameField isFirstResponder] && [touch view] != self.usernameField)
-    {
-        [self.usernameField resignFirstResponder];
-    }
-    else if ([self.passwordField isFirstResponder] && [touch view] != self.passwordField)
-    {
-        [self.passwordField resignFirstResponder];
-    }
-    [super touchesBegan:touches withEvent:event];
 }
 
 @end

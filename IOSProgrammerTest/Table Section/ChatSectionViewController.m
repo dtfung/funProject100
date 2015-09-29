@@ -32,7 +32,6 @@
 - (void)loadJSONData
 {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"chatData" ofType:@"json"];
-
     NSError *error = nil;
 
     NSData *rawData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
@@ -84,7 +83,6 @@
 
     [cell loadWithData:chatData];
     
-
     return cell;
     
 }

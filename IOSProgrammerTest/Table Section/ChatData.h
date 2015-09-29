@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ChatData : NSObject
+@interface ChatData : NSObject 
 @property (nonatomic, readwrite) int user_id;
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *avatar_url;

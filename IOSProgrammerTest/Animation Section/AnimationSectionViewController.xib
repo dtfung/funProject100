@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -44,32 +45,65 @@
                     </connections>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKQ-us-AAh">
-                    <rect key="frame" x="50" y="466" width="221" height="47"/>
+                    <rect key="frame" x="50" y="453" width="221" height="45"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="221" id="Jv9-jU-nSv"/>
-                        <constraint firstAttribute="height" constant="47" id="l2G-e0-BSB"/>
+                        <constraint firstAttribute="height" constant="45" id="l2G-e0-BSB"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
-                    <state key="normal" title="Spin" backgroundImage="btn_bg_spin.png">
+                    <state key="normal" title="Spin" backgroundImage="btn_bg_spin">
                         <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                     </state>
                     <connections>
                         <action selector="spinButton:" destination="-1" eventType="touchUpInside" id="ylj-Sm-ozB"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByN-JP-tKn">
+                    <rect key="frame" x="101" y="520" width="119" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="119" id="ZaU-Tr-AKp"/>
+                        <constraint firstAttribute="height" constant="35" id="zQ4-Wo-juO"/>
+                    </constraints>
+                    <state key="normal" title="Press Me!" backgroundImage="btn_bg_spin">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="Push:" destination="-1" eventType="touchUpInside" id="eUk-c6-eXZ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="cKQ-us-AAh" secondAttribute="bottom" constant="55" id="8zC-Ef-DAo"/>
+                <constraint firstItem="cKQ-us-AAh" firstAttribute="height" secondItem="ByN-JP-tKn" secondAttribute="height" id="0eK-5q-YW2"/>
+                <constraint firstAttribute="bottom" secondItem="ByN-JP-tKn" secondAttribute="bottom" constant="13" id="1xc-lV-A2A"/>
+                <constraint firstAttribute="trailing" secondItem="ByN-JP-tKn" secondAttribute="trailing" constant="8" id="8jA-67-K7e"/>
+                <constraint firstAttribute="bottom" secondItem="cKQ-us-AAh" secondAttribute="bottom" constant="70" id="8zC-Ef-DAo"/>
+                <constraint firstItem="ByN-JP-tKn" firstAttribute="top" secondItem="cKQ-us-AAh" secondAttribute="bottom" constant="22" id="AsB-UZ-fJk"/>
+                <constraint firstItem="ByN-JP-tKn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GQk-qQ-Iuv"/>
                 <constraint firstItem="rzT-q6-eht" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Gbx-r8-ynO"/>
+                <constraint firstAttribute="trailing" secondItem="ByN-JP-tKn" secondAttribute="trailing" constant="100" id="HaM-Pe-09c"/>
+                <constraint firstItem="cKQ-us-AAh" firstAttribute="width" secondItem="ByN-JP-tKn" secondAttribute="width" id="OgB-LP-94o"/>
                 <constraint firstItem="rzT-q6-eht" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OzK-IQ-RP7"/>
+                <constraint firstAttribute="trailing" secondItem="ByN-JP-tKn" secondAttribute="trailing" constant="100" id="hrr-JV-THI"/>
                 <constraint firstAttribute="bottom" secondItem="rzT-q6-eht" secondAttribute="bottom" id="k9a-0Q-M3r"/>
+                <constraint firstItem="ByN-JP-tKn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="101" id="mVL-zd-k7W"/>
                 <constraint firstItem="yvh-aq-g2R" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="mf3-vo-mid"/>
+                <constraint firstItem="ByN-JP-tKn" firstAttribute="trailing" secondItem="cKQ-us-AAh" secondAttribute="trailing" id="qCY-MX-aoO"/>
                 <constraint firstItem="cKQ-us-AAh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="srG-z5-fUY"/>
                 <constraint firstItem="yvh-aq-g2R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tV4-Jv-I00"/>
                 <constraint firstAttribute="trailing" secondItem="rzT-q6-eht" secondAttribute="trailing" id="xAY-vA-kif"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="0eK-5q-YW2"/>
+                    <exclude reference="OgB-LP-94o"/>
+                    <exclude reference="8jA-67-K7e"/>
+                    <exclude reference="GQk-qQ-Iuv"/>
+                    <exclude reference="HaM-Pe-09c"/>
+                    <exclude reference="qCY-MX-aoO"/>
+                </mask>
+            </variation>
         </view>
         <panGestureRecognizer minimumNumberOfTouches="1" id="RWh-h5-n8G">
             <connections>
@@ -79,7 +113,7 @@
     </objects>
     <resources>
         <image name="bg_animation" width="320" height="568"/>
-        <image name="btn_bg_spin.png" width="245" height="56"/>
+        <image name="btn_bg_spin" width="245" height="56"/>
         <image name="gpc_logo_icon" width="140" height="132"/>
     </resources>
 </document>

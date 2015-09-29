@@ -15,8 +15,6 @@
 
 @implementation AnimationSectionViewController
 
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -60,5 +58,27 @@
     [sender setTranslation:CGPointMake(0, 0) inView:self.view];
     [self.animator updateItemUsingCurrentState:self.appPartnerIcon];
 }
+
+- (IBAction)Push:(id)sender {
+    UIPushBehavior *push = [[UIPushBehavior alloc]initWithItems:@[self.appPartnerIcon] mode:UIPushBehaviorModeInstantaneous];
+    push.active = YES;
+    push.pushDirection = CGVectorMake(0.0, 1.0);
+    [self.animator addBehavior:push];
+    
+    [self.animator updateItemUsingCurrentState:self.appPartnerIcon];
+    
+    UIDynamicItemBehavior * dynamicBehavior = [[UIDynamicItemBehavior alloc]initWithItems:@[self.appPartnerIcon]];
+    dynamicBehavior.elasticity = .8;
+    [dynamicBehavior addAngularVelocity:.5 forItem:self.appPartnerIcon];
+    [self.animator addBehavior:dynamicBehavior];
+    
+    //add collisions
+    UICollisionBehavior *collision = [[UICollisionBehavior alloc] initWithItems:@[self.appPartnerIcon]];
+    collision.collisionDelegate = self;
+    collision.collisionMode = UICollisionBehaviorModeEverything;
+    collision.translatesReferenceBoundsIntoBoundary = YES;
+    [self.animator addBehavior:collision];
+}
+
 
 @end
