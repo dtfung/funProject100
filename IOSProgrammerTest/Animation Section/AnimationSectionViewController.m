@@ -39,6 +39,7 @@
 
 - (IBAction)spinButton:(id)sender
 {
+    // Animate AppPartner icon when Spin button is tapped.
     _pusher = [[UIPushBehavior alloc]initWithItems:@[self.appPartnerIcon] mode:UIPushBehaviorModeInstantaneous];
     self.pusher.angle = 360;
     self.pusher.active = YES;
@@ -52,6 +53,7 @@
 
 - (IBAction)panGesture:(UIPanGestureRecognizer *)sender
 {
+    // Used a pan gesture to drag the AppPartner icon around the screen
     CGPoint translation = [sender translationInView:self.view];
     sender.view.center = CGPointMake(sender.view.center.x + translation.x,
                                      sender.view.center.y + translation.y);
@@ -60,6 +62,8 @@
 }
 
 - (IBAction)Push:(id)sender {
+    
+    //  Additional functionality implemented when the 'Press Me!' button is tapped.
     UIPushBehavior *push = [[UIPushBehavior alloc]initWithItems:@[self.appPartnerIcon] mode:UIPushBehaviorModeInstantaneous];
     push.active = YES;
     push.pushDirection = CGVectorMake(0.0, 1.0);
@@ -72,7 +76,7 @@
     [dynamicBehavior addAngularVelocity:.5 forItem:self.appPartnerIcon];
     [self.animator addBehavior:dynamicBehavior];
     
-    //add collisions
+    //  add collisions
     UICollisionBehavior *collision = [[UICollisionBehavior alloc] initWithItems:@[self.appPartnerIcon]];
     collision.collisionDelegate = self;
     collision.collisionMode = UICollisionBehaviorModeEverything;
